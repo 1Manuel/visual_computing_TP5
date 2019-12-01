@@ -6,6 +6,7 @@
 
 int COLS = 100;
 int ROWS = 100;
+float FOCAL_LENGTH = 1;
 
 void calculatePinholeProjection(struct point3d *point3d, int N, float focalLength) {
   float zPortion;
@@ -140,7 +141,7 @@ int main(int argc, char* argv[]) {
   centerThePCL(points3d, N_v);
   point2d *imagePoints;
 
-  calculatePinholeProjection(points3d, N_v, 0.5);
+  calculatePinholeProjection(points3d, N_v, FOCAL_LENGTH);
   printf("Pinhole projection done. \n");
 
   imagePoints = uvProjection(points3d, N_v);
