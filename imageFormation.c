@@ -140,7 +140,7 @@ int main(int argc, char* argv[]) {
   centerThePCL(points3d, N_v);
   point2d *imagePoints;
 
-  calculatePinholeProjection(points3d, N_v, 1);
+  calculatePinholeProjection(points3d, N_v, 0.5);
   printf("Pinhole projection done. \n");
 
   imagePoints = uvProjection(points3d, N_v);
