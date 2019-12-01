@@ -19,17 +19,12 @@ struct point3d{
 };
 
 typedef struct point2d {
-  float x; // If you want to access x, you need to do p.x, suppose you decleared p as "struct point3d p;"
-  float y; // Similar to above
+  int x; // If you want to access x, you need to do p.x, suppose you decleared p as "struct point3d p;"
+  int y; // Similar to above
   int r;
   int g;
   int b;
 } point2d;
-
-typedef struct Coordinate {
-  int x;
-  int y;
-} Coordinate;
 
 /* The following function reads a point cloud from an off file and returns the point cloud in an array of structre of point3d */
 /* The number of points is also return in N */
